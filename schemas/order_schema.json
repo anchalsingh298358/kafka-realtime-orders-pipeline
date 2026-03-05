@@ -1,0 +1,13 @@
+{
+  "type": "record",
+  "name": "Order",
+  "namespace": "orders.pipeline",
+  "fields": [
+    {"name": "order_id", "type": "string"},
+    {"name": "customer_id", "type": "string"},
+    {"name": "product_id", "type": "string"},
+    {"name": "quantity", "type": "int"},
+    {"name": "price", "type": "double"},
+    {"name": "timestamp", "type": "string"}
+  ]
+}
