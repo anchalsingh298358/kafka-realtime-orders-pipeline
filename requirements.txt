@@ -3,3 +3,4 @@ pandas
 pyarrow
 fastavro
 boto3
+prometheus_client
