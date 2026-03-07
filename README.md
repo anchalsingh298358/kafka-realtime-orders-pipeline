@@ -29,6 +29,7 @@ Consumer Processing Service
       │
       └── Failed Events → Dead Letter Queue
 ```
+![alt text](images/architecture.PNG)
 
 ### Components
 
@@ -63,7 +64,9 @@ kafka-realtime-orders-pipeline
 │   └── order_producer.py
 │
 ├── consumer
-│   └── order_consumer.py
+│   ├── order_consumer.py
+│   ├── metrics.py
+│   └── schema_validator.py
 │
 ├── storage
 │   └── parquet_writer.py
@@ -74,10 +77,12 @@ kafka-realtime-orders-pipeline
 ├── scripts
 │   └── create_topics.sh
 │
+├── monitoring
+│   └── prometheus.yml
+│
 ├── docker
 │   └── docker-compose.yml
 │
-├── docs
 └── README.md
 ```
 
@@ -371,6 +376,19 @@ data/orders/
 Each file contains a batch of processed order events.
 
 ---
+# Results
+---
+![alt text](<images/Grafana Dashboard.PNG>)
+![alt text](images/DataSource.PNG)
+![alt text](images/metric_collected.PNG)
+![alt text](images/kafka-ui.PNG)
+![alt text](images/broker-kafka.PNG)
+![alt text](images/producers-kafka.PNG)
+![alt text](images/consumer-kafka.PNG)
+![alt text](images/order-topic.PNG)
+![alt text](images/producer-order-generated.PNG)
+![alt text](images/processed-success.PNG)
+![alt text](images/failed-consume.PNG)
 
 # Future Improvements
 
